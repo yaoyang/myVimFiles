@@ -1,0 +1,49 @@
+colorscheme darkblue
+highlight Normal guifg=#d4d4d4 guibg=#272727
+highlight Folded guibg=#333333
+highlight FoldColumn guibg=NONE
+highlight LineNr guibg=#333333
+
+
+set number
+set colorcolumn=72
+highlight ColorColumn guibg=#5e5e5e
+
+autocmd FileType tex colorscheme default
+autocmd FileType tex set background=light
+autocmd FileType tex set guifont=Consolas:h11:cDEFAULT:qPROOF
+autocmd FileType tex highlight Comment gui=italic
+autocmd FileType tex highlight ColorColumn guibg=darkgrey
+
+set lines=32 columns=100
+
+
+vmap <C-S-c> "+yi
+vmap <C-S-x> "+c
+vmap <C-S-v> <ESC>"+p
+imap <C-S-v> <C-r><C-o>+
+
+
+set foldmethod=syntax
+"set foldmethod=indent
+set foldlevel=99
+set foldcolumn=1
+set mouse=a
+
+
+"vim-plug
+source D:\repos\vimfiles\autoload\plug.vim
+
+call plug#begin('D:\repos\vimfiles\plugged')
+
+Plug 'JuliaEditorSupport/julia-vim'
+
+"Plug 'Valloric/YouCompleteMe'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+"Plug 'JuliaEditorSupport/julia-vim'
+
+Plug 'skywind3000/asyncrun.vim'
+
+call plug#end()
+

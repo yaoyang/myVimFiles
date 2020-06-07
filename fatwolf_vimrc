@@ -1,0 +1,32 @@
+set nobackup
+set noswapfile
+set noundofile
+
+syntax on
+"set exrc
+"set secure
+
+"set number
+set ruler
+set cul
+set history=2000
+
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set magic
+map <Leader>/ :let @/ = ""
+
+set autoindent
+set smartindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+set colorcolumn=72
+"highlight ColorColumn ctermbg=darkgray
+
+
+
